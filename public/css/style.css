@@ -1,3 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+}
+
+i {
+  padding: 8px 11px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h4 {
+  font-family: "Shrikhand", cursive;
+}
+
+button {
+  border-radius: 25px;
+  width: fit-content;
+  padding: 13px 13px;
+  background: linear-gradient(160deg, #FF79DA, #9356DC);
+  color: white;
+  border: none;
+  margin: auto;
+  box-shadow: 0px 2px 5px gray;
+}
+
+.header__button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: black;
+  margin: 0;
+  position: absolute;
+  left: -7px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 5px gray;
+}
+.header__logo {
+  margin: 10px;
+}
+
+.footer {
+  background-color: #313131;
+}
+.footer__logo {
+  font-size: 13px;
+  padding: 15px 20px;
+  color: #fff;
+}
+.footer__nav {
+  padding-left: 10px;
+  list-style-type: none;
+  line-height: 25px;
+}
+.footer__nav--link {
+  color: #fff;
+}
+.footer__nav--link i {
+  padding: 5px;
+}
+
+i {
+  padding: 8px 11px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  background-color: #e8e7e7;
+}
+.location__logo {
+  margin: 10px 5px;
+  padding: 0;
+}
+.location__text {
+  margin: 10px 5px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 35px 25px;
+  text-align: center;
+  gap: 20px;
+  background-color: rgba(240, 240, 240, 0.6078431373);
+}
+.intro__title {
+  font-size: 25px;
+}
+
+.functioning {
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.functioning__title {
+  margin: 0px 40px 10px 0px;
+}
+.functioning__card {
+  margin: 15px 0px;
+  border-radius: 20px;
+  width: 100%;
+  padding: 25px 0px;
+  display: flex;
+  background-color: rgba(240, 240, 240, 0.6078431373);
+  box-shadow: 0px 2px 5px gray;
+}
+.functioning__card__content {
+  align-items: center;
+}
+.functioning__card__content--number {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  right: 15px;
+  background-color: #9356DC;
+  color: white;
+  font-size: 13px;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 26px;
+  background-color: rgba(240, 240, 240, 0.6078431373);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.restaurant__card {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.restaurant__card__content--image {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+.restaurant__card__content--new {
+  position: relative;
+  bottom: 140px;
+  left: 230px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 5px 6px;
+  font-size: 13px;
+}
+.restaurant__card__content--bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.restaurant__card__content--bottom--text {
+  width: 70%;
+  line-height: 23px;
+  padding: 8px;
+  color: black;
+}
+.restaurant__card__content--bottom--animation {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #313131;
+}
+.restaurant__card__content--bottom--animation i {
+  padding: 0;
+  font-size: 25px;
+  position: relative;
+  top: 10px;
+}
+.restaurant__card__content--bottom--animation .fa-solid {
+  display: none;
+  color: linear-gradient(160deg, #FF79DA, #9356DC);
+  right: 25px;
+}
+
+.a_la_francaise {
+  background-image: url(../images/restaurants/a_la_francaise.jpg);
+}
+
+.la_palette_du_gout {
+  background-image: url(../images/restaurants/la_palette_du_gout.jpg);
+}
+
+.le_delice_des_sens {
+  background-image: url(../images/restaurants/le_delice_des_sens.jpg);
+}
+
+.la_note_enchantee {
+  background-image: url(../images/restaurants/la_note_enchantee.jpg);
+}
+
+.image {
+  height: 250px;
+  background-size: cover;
+}
+
+.menu {
+  border-radius: 30px 30px 0 0;
+  position: relative;
+  bottom: 25px;
+  background-color: #fff;
+}
+.menu__title {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 10px;
+}
+.menu__title i {
+  padding: 0;
+  font-size: 25px;
+  position: relative;
+  right: 8px;
+}
+.menu__title .fa-solid {
+  display: none;
+  color: linear-gradient(160deg, #FF79DA, #9356DC);
+  position: relative;
+  right: 8px;
+}
 
 /*# sourceMappingURL=style.css.map */

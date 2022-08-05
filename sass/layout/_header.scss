@@ -1,0 +1,8 @@
+.header{
+    display: flex;
+    justify-content: center;
+    @include box-shadow;
+    &__logo{
+        margin: 10px;
+    }
+}

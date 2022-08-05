@@ -1,0 +1,19 @@
+button{
+    border-radius: 25px;
+    width: fit-content;
+    padding: 13px 13px;
+    background: linear-gradient(160deg, $color-secondary, $color-primary);
+    color: white;
+    border: none;
+    margin: auto;
+    @include box-shadow;
+}
+.header__button{
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: black;
+    margin: 0;
+    position: absolute;
+    left: -7px;
+}

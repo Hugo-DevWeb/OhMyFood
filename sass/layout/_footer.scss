@@ -1,0 +1,19 @@
+.footer{
+    background-color: $color-dark;
+    &__logo{
+       font-size: $normal-font;
+       padding: 15px 20px;
+       color: $color-white;
+    }
+    &__nav{
+        padding-left: 10px;
+        list-style-type: none;
+        line-height: 25px;
+        &--link{
+            color: $color-white;
+            & i {
+                padding: 5px;
+            }
+        }
+    }
+}

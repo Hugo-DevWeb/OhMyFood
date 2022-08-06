@@ -7,6 +7,9 @@ button{
     border: none;
     margin: auto;
     @include box-shadow;
+    & a{
+        color: black;
+    }
 }
 .header__button{
     background: none;

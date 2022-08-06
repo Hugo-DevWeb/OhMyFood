@@ -67,10 +67,11 @@ i{
     padding-top: 25px;
     padding-bottom: 25px;
     &__card{
-        width: 80%;
+        width: 90%;
         background-color: $color-white;
         border-radius: 20px;
         overflow: hidden;
+        @include box-shadow;
 
         &__content{
             &--image{
@@ -82,7 +83,7 @@ i{
             &--new{
                 position: relative;
                 bottom: 140px;
-                left: 230px;
+                left: 280px;
                 background-color: $color-tertiary;
                 color: darken($color: $color-tertiary, $amount: 50%);
                 padding: 5px 6px;

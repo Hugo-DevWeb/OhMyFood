@@ -16,14 +16,19 @@
     background-size: cover;
 }
 .menu{
+    @include flexbox ($flex-direction: column);
     border-radius: 30px 30px 0 0;
     position: relative;
     bottom: 25px;
-    background-color: $color-white;
+    background-color: $color-grey;
+    padding: 15px;
+    padding-bottom: 0%;
+    gap: 20px;
     &__title{
-        padding: 15px 10px;
         @include flexbox ($justify-content: space-between);
-        padding-right: 10px;
+        margin-bottom: 35px;
+        width: 100%;
+        font-size: $large-font;
         & i{
             padding: 0;
             font-size: 25px;
@@ -39,6 +44,42 @@
         }
     }
     &__group{
-        
+        &--title{
+            font-size: $normal-font;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        &--separate{
+            display: block;
+            height: 3px;
+            width: 40px;
+            background-color: $color-tertiary;
+        }
+    }
+    &__card{
+        display: flex;
+        background: white;
+        border-radius: 20px;
+        padding: 12px;
+        box-shadow: 0px 2px 12px $color-shadow;
+        width: 100%;
+        &--text{
+            flex-basis: 90%;
+            line-height: 25px;
+            font-size: $normal-font;
+            & h3{
+                font-weight: 600;
+            }
+            & span{
+                font-weight: 400
+            }
+        }
+        &--price{
+            @include flexbox ($align-items: end);
+            font-size: $normal-font
+        }
+        &--animation{
+            visibility: hidden;
+        }
     }
 }

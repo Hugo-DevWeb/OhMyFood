@@ -7,6 +7,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 i {
@@ -29,7 +30,10 @@ button {
   color: white;
   border: none;
   margin: auto;
-  box-shadow: 0px 2px 5px gray;
+  box-shadow: 0px 2px 5px #c3c3c3;
+}
+button a {
+  color: black;
 }
 
 .header__button {
@@ -45,7 +49,7 @@ button {
 .header {
   display: flex;
   justify-content: center;
-  box-shadow: 0px 2px 5px gray;
+  box-shadow: 0px 2px 5px #c3c3c3;
 }
 .header__logo {
   margin: 10px;
@@ -95,7 +99,7 @@ i {
   padding: 35px 25px;
   text-align: center;
   gap: 20px;
-  background-color: rgba(240, 240, 240, 0.6078431373);
+  background-color: #f3f3f3;
 }
 .intro__title {
   font-size: 25px;
@@ -115,8 +119,8 @@ i {
   width: 100%;
   padding: 25px 0px;
   display: flex;
-  background-color: rgba(240, 240, 240, 0.6078431373);
-  box-shadow: 0px 2px 5px gray;
+  background-color: #f3f3f3;
+  box-shadow: 0px 2px 5px #c3c3c3;
 }
 .functioning__card__content {
   align-items: center;
@@ -138,15 +142,16 @@ i {
   justify-content: flex-start;
   align-items: center;
   gap: 26px;
-  background-color: rgba(240, 240, 240, 0.6078431373);
+  background-color: #f3f3f3;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 .restaurant__card {
-  width: 80%;
+  width: 90%;
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0px 2px 5px #c3c3c3;
 }
 .restaurant__card__content--image {
   height: 150px;
@@ -156,7 +161,7 @@ i {
 .restaurant__card__content--new {
   position: relative;
   bottom: 140px;
-  left: 230px;
+  left: 280px;
   background-color: #99E2D0;
   color: #1b6150;
   padding: 5px 6px;
@@ -216,18 +221,26 @@ i {
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
   border-radius: 30px 30px 0 0;
   position: relative;
   bottom: 25px;
-  background-color: #fff;
+  background-color: #f3f3f3;
+  padding: 15px;
+  padding-bottom: 0%;
+  gap: 20px;
 }
 .menu__title {
-  padding: 15px 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  padding-right: 10px;
+  margin-bottom: 35px;
+  width: 100%;
+  font-size: 15px;
 }
 .menu__title i {
   padding: 0;
@@ -240,6 +253,46 @@ i {
   color: linear-gradient(160deg, #FF79DA, #9356DC);
   position: relative;
   right: 8px;
+}
+.menu__group--title {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.menu__group--separate {
+  display: block;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+}
+.menu__card {
+  display: flex;
+  background: white;
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0px 2px 12px #c3c3c3;
+  width: 100%;
+}
+.menu__card--text {
+  flex-basis: 90%;
+  line-height: 25px;
+  font-size: 13px;
+}
+.menu__card--text h3 {
+  font-weight: 600;
+}
+.menu__card--text span {
+  font-weight: 400;
+}
+.menu__card--price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: end;
+  font-size: 13px;
+}
+.menu__card--animation {
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

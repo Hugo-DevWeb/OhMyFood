@@ -42,6 +42,9 @@ i{
         display: flex;
         background-color: $color-grey;
         @include box-shadow;
+        &:hover{
+            background-color: lighten($color: $color-primary, $amount: 35%);
+        }
         &__content{
             align-items: center;
             
@@ -109,11 +112,16 @@ i{
                     font-size: 25px;
                     position: relative;
                     top: 10px;
+                    
+                }
+                
                 }
                 & .fa-solid {
-                    display: none;
-                    color: linear-gradient(160deg, $color-secondary, $color-primary);
+                    visibility: hidden;
+                    background: linear-gradient(160deg, $color-secondary, $color-primary);
+                    background-clip: text;
                     right: 25px;
+
                 }
 
                
@@ -123,4 +131,3 @@ i{
             
         }
     }
-}

@@ -24,6 +24,7 @@
     padding: 15px;
     padding-bottom: 0%;
     gap: 20px;
+    
     &__title{
         @include flexbox ($justify-content: space-between);
         margin-bottom: 35px;
@@ -60,13 +61,18 @@
         display: flex;
         background: white;
         border-radius: 20px;
-        padding: 12px;
         box-shadow: 0px 2px 12px $color-shadow;
         width: 100%;
+        overflow: hidden; 
+        animation: apparition 1s ease-out;
+        &:active + .menu__card--animation{
+            animation: select 0.8s forwards;
+        }    
         &--text{
             flex-basis: 90%;
             line-height: 25px;
             font-size: $normal-font;
+            padding: 12px;
             & h3{
                 font-weight: 600;
             }
@@ -75,11 +81,56 @@
             }
         }
         &--price{
-            @include flexbox ($align-items: end);
-            font-size: $normal-font
+            @include flexbox ($justify-content: flex-end,$align-items: end);
+            font-size: $normal-font;
+            padding: 12px;
+            flex-basis: 10%;
         }
         &--animation{
-            visibility: hidden;
+            background-color: $color-tertiary;
+            @include flexbox ($align-items: center);
+            
+            & i{
+                display: flex;
+                align-items: center;
+            }
         }
+    }
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes select {
+    0% {
+        transform: translateX(100px);
+       
+    }
+
+    20% {
+        transform: translateX(0px);
+    }
+
+    40% {
+        transform: translateX(-20px);
+        
+    }
+
+    60% {
+        transform: translateX(-40px);
+    }
+
+    80% {
+        transform: translateX(-60px);
+        
+    }
+    100% {
+        transform: translateX(-100px);
     }
 }

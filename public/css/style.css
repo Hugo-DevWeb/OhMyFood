@@ -47,6 +47,7 @@ button {
   color: white;
   border: none;
   margin: auto;
+  cursor: pointer;
   box-shadow: 0px 2px 5px #c3c3c3;
 }
 button a {
@@ -111,8 +112,9 @@ i {
 
 .intro {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
   padding: 35px 25px;
   text-align: center;
   gap: 20px;
@@ -156,6 +158,22 @@ i {
   font-size: 13px;
 }
 
+.first_card {
+  background-image: url(../../public/images/restaurants/la_palette_du_gout.jpg);
+}
+
+.second_card {
+  background-image: url(../../public/images/restaurants/la_note_enchantee.jpg);
+}
+
+.third_card {
+  background-image: url(../../public/images/restaurants/a_la_francaise.jpg);
+}
+
+.fourth_card {
+  background-image: url(../../public/images/restaurants/le_delice_des_sens.jpg);
+}
+
 .restaurant {
   display: flex;
   flex-direction: column;
@@ -176,12 +194,11 @@ i {
 .restaurant__card__content--image {
   height: 150px;
   width: 100%;
-  object-fit: cover;
+  background-size: cover;
+  text-align: end;
+  padding: 15px;
 }
 .restaurant__card__content--new {
-  position: relative;
-  bottom: 140px;
-  left: 280px;
   background-color: #99E2D0;
   color: #1b6150;
   padding: 5px 6px;
@@ -212,12 +229,18 @@ i {
   font-size: 25px;
   position: relative;
   top: 10px;
+  animation: like 1s forwards;
 }
-.restaurant__card__content--bottom .fa-solid {
-  visibility: hidden;
+.restaurant__card__content--bottom .restaurant__like {
+  color: white;
+  -webkit-text-stroke: 1px black;
+  transition: color 1s;
   background: linear-gradient(160deg, #FF79DA, #9356DC);
   background-clip: text;
-  right: 25px;
+}
+.restaurant__card__content--bottom .restaurant__like:hover {
+  color: transparent;
+  -webkit-text-stroke-color: #9356DC;
 }
 
 .a_la_francaise {
@@ -293,19 +316,26 @@ i {
   box-shadow: 0px 2px 12px #c3c3c3;
   width: 100%;
   overflow: hidden;
-  animation: apparition 1s ease-out;
+  animation: apparition 0.8s ease-out;
 }
-.menu__card:active + .menu__card--animation {
-  animation: select 0.8s forwards;
+.menu__card a {
+  display: flex;
+  width: inherit;
 }
 .menu__card--text {
-  flex-basis: 90%;
+  flex-basis: 85%;
   line-height: 25px;
   font-size: 13px;
   padding: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__card--text h3 {
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__card--text span {
   font-weight: 400;
@@ -313,14 +343,17 @@ i {
 .menu__card--price {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: end;
   font-size: 13px;
   padding: 12px;
-  flex-basis: 10%;
+  flex-basis: 15%;
 }
 .menu__card--animation {
   background-color: #99E2D0;
+  margin-right: -50px;
+  transition: margin-right 1.2s;
+  width: 50px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -329,36 +362,34 @@ i {
 .menu__card--animation i {
   display: flex;
   align-items: center;
+  color: #1b6150;
+}
+.menu__card:hover .menu__card--animation {
+  margin-right: 0px;
+}
+.menu__card:active .menu__card--animation {
+  margin-right: 0px;
+}
+.menu__card:hover .menu__card--animation i {
+  animation: rotate 1s ease;
 }
 
+@keyframes rotate {
+  0% {
+    rotate: 360deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
 @keyframes apparition {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
     transform: translateY(0px);
-  }
-}
-@keyframes select {
-  0% {
-    transform: translateX(100px);
-  }
-  20% {
-    transform: translateX(0px);
-  }
-  40% {
-    transform: translateX(-20px);
-  }
-  60% {
-    transform: translateX(-40px);
-  }
-  80% {
-    transform: translateX(-60px);
-  }
-  100% {
-    transform: translateX(-100px);
   }
 }
 

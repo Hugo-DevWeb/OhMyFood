@@ -64,73 +64,78 @@
         box-shadow: 0px 2px 12px $color-shadow;
         width: 100%;
         overflow: hidden; 
-        animation: apparition 1s ease-out;
-        &:active + .menu__card--animation{
-            animation: select 0.8s forwards;
+        animation: apparition 0.8s ease-out;
+        & a{
+            display: flex;
+            width: inherit;
+            
         }    
         &--text{
-            flex-basis: 90%;
+            flex-basis: 85%;
             line-height: 25px;
             font-size: $normal-font;
             padding: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             & h3{
                 font-weight: 600;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             & span{
-                font-weight: 400
+                font-weight: 400;
             }
         }
         &--price{
-            @include flexbox ($justify-content: flex-end,$align-items: end);
+            @include flexbox ($justify-content: center,$align-items: end);
             font-size: $normal-font;
             padding: 12px;
-            flex-basis: 10%;
+            flex-basis: 15%;
         }
         &--animation{
             background-color: $color-tertiary;
+            margin-right: -50px;
+            transition: margin-right 1.2s;
+            width: 50px;
             @include flexbox ($align-items: center);
+            
             
             & i{
                 display: flex;
                 align-items: center;
+                color: darken($color: $color-tertiary, $amount: 50%);
+                
             }
         }
+        &:hover .menu__card--animation {
+            margin-right: 0px;
+        }
+        &:active .menu__card--animation {
+            margin-right: 0px;
+        }
+        &:hover .menu__card--animation i{
+            animation: rotate 1s ease;
+        }
+    }
+}
+@keyframes  rotate{
+    0% {
+        rotate: 360deg;
+    }
+    100%{
+        rotate: 0deg;
     }
 }
 @keyframes apparition {
     from {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(40px);
     }
     to {
         opacity: 1;
         transform: translateY(0px);
     }
 }
-@keyframes select {
-    0% {
-        transform: translateX(100px);
-       
-    }
 
-    20% {
-        transform: translateX(0px);
-    }
-
-    40% {
-        transform: translateX(-20px);
-        
-    }
-
-    60% {
-        transform: translateX(-40px);
-    }
-
-    80% {
-        transform: translateX(-60px);
-        
-    }
-    100% {
-        transform: translateX(-100px);
-    }
-}

@@ -37,12 +37,6 @@
             right: 8px;
            
         }
-        & .fa-solid {
-            display: none;
-            color: linear-gradient(160deg, $color-secondary, $color-primary);
-            position: relative;
-            right: 8px;
-        }
     }
     &__group{
         &--title{
@@ -109,33 +103,7 @@
                 
             }
         }
-        &:hover .menu__card--animation {
-            margin-right: 0px;
-        }
-        &:active .menu__card--animation {
-            margin-right: 0px;
-        }
-        &:hover .menu__card--animation i{
-            animation: rotate 1s ease;
-        }
     }
 }
-@keyframes  rotate{
-    0% {
-        rotate: 360deg;
-    }
-    100%{
-        rotate: 0deg;
-    }
-}
-@keyframes apparition {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
+
 

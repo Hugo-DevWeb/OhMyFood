@@ -1,0 +1,27 @@
+.footer__nav{
+    padding-left: 10px;
+    list-style-type: none;
+    line-height: 25px;
+    &--link{
+        color: $color-white;
+        & i {
+            padding: 5px;
+        }
+    }
+}
+@media screen and (min-width:993px){
+    .footer__nav{
+        display: flex;
+        width: 100%;
+        &--link{
+            margin: auto;
+            border: 2px solid $color-primary;
+            border-radius: 106px;
+            height: 200px;
+            width: 200px;
+            @include flexbox ($justify-content: center, $align-items: center);
+            background-color: $color-primary;
+        }
+    }
+    
+}

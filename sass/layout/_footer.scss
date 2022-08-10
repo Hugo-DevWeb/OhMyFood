@@ -5,15 +5,15 @@
        padding: 15px 20px;
        color: $color-white;
     }
-    &__nav{
-        padding-left: 10px;
-        list-style-type: none;
-        line-height: 25px;
-        &--link{
-            color: $color-white;
-            & i {
-                padding: 5px;
-            }
+
+}
+@media screen and (min-width: 993px){
+    .footer{
+        padding-bottom: 25px;
+        &__logo{
+            font-size: 27px;
+            text-align: center;
         }
-    }
+
+}
 }

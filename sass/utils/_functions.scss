@@ -6,7 +6,7 @@
         -webkit-text-stroke: 1px black;
         transition: color 1s;
         background: linear-gradient(160deg, $color-secondary, $color-primary);
-        background-clip: text;    
+        -webkit-background-clip: text;  
         &:hover{
             color: transparent;
             -webkit-text-stroke-color: $color-primary;
@@ -22,33 +22,39 @@
     animation: rotate 1s ease;
 }
 @keyframes loader-close {
+    from{
+        transform: scale(1)
+    };
     to{
-        scale: 0;
+        transform: scale(0);
+        transform: translateX(2000px);
     }
     
 }
 @keyframes loader {
-    0%{
-        rotate: 0deg;
+    from{
+        transform: rotate(0deg);
+
     }
-    100%{
-        rotate: 360deg;
+    to{
+        transform: rotate(360deg);
+
     }
 }
 @keyframes  rotate{
-    0% {
-        rotate: 360deg;
+    from {
+        transform: rotate(360deg);
     }
-    100%{
-        rotate: 0deg;
+    to{
+        transform: rotate(0deg);
     }
 }
 @keyframes apparition {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(40px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }

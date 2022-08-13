@@ -89,6 +89,12 @@ body{
         &:hover .functioning__card__content--logo{
             color: $color-primary;
         }
+        &:active{
+            background-color: lighten($color: $color-primary, $amount: 35%);
+        }
+        &:active .functioning__card__content--logo{
+            color: $color-primary;
+        }
         
     }
 }

@@ -15,16 +15,24 @@
   color: transparent;
   -webkit-text-stroke-color: #9356DC;
 }
+.restaurant__like:active {
+  color: transparent;
+  -webkit-text-stroke-color: #9356DC;
+}
 
 .menu__card:hover .menu__card--animation {
   margin-right: 0px;
+}
+
+.menu__card:hover .menu__card--animation i {
+  animation: rotate 1s ease;
 }
 
 .menu__card:active .menu__card--animation {
   margin-right: 0px;
 }
 
-.menu__card:hover .menu__card--animation i {
+.menu__card:active .menu__card--animation i {
   animation: rotate 1s ease;
 }
 
@@ -274,6 +282,12 @@ body {
   background-color: #f2eafb;
 }
 .functioning__card:hover .functioning__card__content--logo {
+  color: #9356DC;
+}
+.functioning__card:active {
+  background-color: #f2eafb;
+}
+.functioning__card:active .functioning__card__content--logo {
   color: #9356DC;
 }
 

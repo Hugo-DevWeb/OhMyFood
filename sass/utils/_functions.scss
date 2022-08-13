@@ -11,14 +11,21 @@
             color: transparent;
             -webkit-text-stroke-color: $color-primary;
         }
+        &:active{
+            color: transparent;
+            -webkit-text-stroke-color: $color-primary;
+        }
 }
 .menu__card:hover .menu__card--animation {
     margin-right: 0px;
 }
+.menu__card:hover .menu__card--animation i{
+    animation: rotate 1s ease;
+}
 .menu__card:active .menu__card--animation {
     margin-right: 0px;
 }
-.menu__card:hover .menu__card--animation i{
+.menu__card:active .menu__card--animation i{
     animation: rotate 1s ease;
 }
 @keyframes loader-close {

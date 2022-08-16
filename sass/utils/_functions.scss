@@ -29,12 +29,9 @@
     animation: rotate 1s ease;
 }
 @keyframes loader-close {
-    from{
-        transform: scale(1)
-    };
+
     to{
-        transform: scale(0);
-        transform: translateX(2000px);
+        transform: scale(0) translateX(2000px);
     }
     
 }
@@ -56,8 +53,36 @@
         transform: rotate(0deg);
     }
 }
-@keyframes apparition {
+@keyframes apparition-starter {
     0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes apparition-dish{
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    30%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes apparition-dessert{
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    60%{
         opacity: 0;
         transform: translateY(40px);
     }

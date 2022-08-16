@@ -58,7 +58,6 @@
         box-shadow: 0px 2px 12px $color-shadow;
         width: 100%;
         overflow: hidden; 
-        animation: apparition 0.8s ease-out;
         & a{
             display: flex;
             width: inherit;
@@ -105,5 +104,13 @@
         }
     }
 }
-
+.starter__card{
+    animation: apparition-starter 1s ease 1;
+}
+.dish__card{
+    animation: apparition-dish 1s  ease 1;
+}
+.dessert__card{
+    animation: apparition-dessert 1s ease 1;
+}
 

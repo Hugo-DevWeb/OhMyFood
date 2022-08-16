@@ -12,6 +12,9 @@ button{
     & a{
         color: black;
     }
+    &:hover{
+        opacity: 0.8;
+    }
 }
 /* Mise en forme du bouton retour du header */
 .header__button{

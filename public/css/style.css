@@ -216,7 +216,7 @@ i {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
-  position: absolute;
+  position: fixed;
   animation: loader-close 200ms 2s forwards;
   height: 100%;
   width: 100%;
@@ -299,8 +299,7 @@ body {
   border-radius: 20px;
   width: 30px;
   height: 30px;
-  position: relative;
-  right: 15px;
+  margin-left: -14px;
   background-color: #9356DC;
   color: white;
   font-size: 13px;
@@ -546,6 +545,12 @@ body {
 
 .dessert__card {
   animation: apparition-dessert 1s ease 1;
+}
+
+@media screen and (min-width: 993px) {
+  .image {
+    background-position: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

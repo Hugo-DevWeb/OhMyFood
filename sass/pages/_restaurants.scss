@@ -14,6 +14,7 @@
 .image{
     height: 250px;
     background-size: cover;
+
 }
 .menu{
     @include flexbox ($flex-direction: column);
@@ -113,4 +114,9 @@
 .dessert__card{
     animation: apparition-dessert 1s ease 1;
 }
-
+@media screen  and (min-width: 993px){
+    .image{
+        background-position: center;
+    }
+    
+}
